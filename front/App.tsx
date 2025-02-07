@@ -1,28 +1,14 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Button,
-  TextInput,
-  SafeAreaView,
-} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import AuthHomeScreen from './src/screens/AuthHomeScreen';
+import AuthStackNavigator from './src/navigations/stack/AuthStackNavigator';
+import RootNavigator from './src/navigations/root/RootNavigator';
 
 function App() {
   return (
     <NavigationContainer>
-      <AuthHomeScreen />
+      <RootNavigator />
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'red',
-    margin: 10,
-  },
-});
 
 export default App;

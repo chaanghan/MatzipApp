@@ -1,7 +1,7 @@
 import {StackScreenProps} from '@react-navigation/stack';
 import React from 'react';
 import {View, Button, SafeAreaView} from 'react-native';
-import {AuthStackParamList} from '../navigation/AuthStackNavigator';
+import {AuthStackParamList} from '../navigations/stack/AuthStackNavigator';
 import {authStackNavigations} from '../constants';
 
 // screen typing
@@ -14,7 +14,11 @@ function AuthHomeScreen({navigation}: AuthHomeScreenProps) {
       <View>
         <Button
           title="로그인"
-          onPress={() => navigation.navigate(authStackNavigations.AUTH_HOME)}
+          onPress={() => navigation.navigate(authStackNavigations.LOGIN)}
+        />
+        <Button
+          title="회원가입"
+          onPress={() => navigation.navigate(authStackNavigations.SIGNUP)}
         />
       </View>
     </SafeAreaView>
