@@ -5,20 +5,14 @@ import {
   logout,
   postLogin,
   postSignup,
-} from '../../api/auth';
-import {
-  UseMutationCustomOptions,
-  UseQueryCustomOptions,
-} from '../../types/common';
-import {
-  removeEncryptStorage,
-  setEncryptStorage,
-} from '../../utils/encryptStorage';
-import {removeHeader, setHeader} from '../../utils/header';
+} from '@/api/auth';
+import {UseMutationCustomOptions, UseQueryCustomOptions} from '@/types/common';
+import {removeEncryptStorage, setEncryptStorage} from '@/utils/encryptStorage';
+import {removeHeader, setHeader} from '@/utils/header';
 import {useEffect} from 'react';
-import queryClient from '../../api/queryClient';
-import {queryKeys, storageKeys} from '../../constants/keys';
-import {numbers} from '../../constants/numbers';
+import queryClient from '@/api/queryClient';
+import {queryKeys, storageKeys} from '@/constants/keys';
+import {numbers} from '@/constants/numbers';
 
 // 회원가입
 function useSignup(mutationOptions?: UseMutationCustomOptions) {

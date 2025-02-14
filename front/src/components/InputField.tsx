@@ -1,8 +1,8 @@
 import React, {ForwardedRef, forwardRef, useRef} from 'react';
 import {View, Text, StyleSheet, Dimensions, TextInputProps} from 'react-native';
 import {Pressable, TextInput} from 'react-native-gesture-handler';
-import {colors} from '../constants/colors';
-import {mergeRef} from '../utils/common';
+import {colors} from '@/constants/colors';
+import {mergeRef} from '@/utils/common';
 
 interface InputFileProps extends TextInputProps {
   disabled?: boolean;

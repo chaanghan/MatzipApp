@@ -1,9 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import AuthHomeScreen from '../../screens/auth/AuthHomeScreen';
-import LoginScreen from '../../screens/auth/LoginScreen';
-import {authStackNavigations} from '../../constants/navigations';
-import SignupScreen from '../../screens/auth/SignupScreen';
+import AuthHomeScreen from '@/screens/auth/AuthHomeScreen';
+import LoginScreen from '@/screens/auth/LoginScreen';
+import {authStackNavigations} from '@/constants/navigations';
+import SignupScreen from '@/screens/auth/SignupScreen';
 
 // param을 typeing 하는 경우는 상세 스크린과 같이 id 값을 쓰는 스크린에 해주면 됨
 // 사용할 곳이 많으므로 'AuthHome', 'Login'을 상수처리하는 것이 좋음

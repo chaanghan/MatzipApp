@@ -7,7 +7,7 @@ import {
   Dimensions,
   View,
 } from 'react-native';
-import {colors} from '../constants/colors';
+import {colors} from '@/constants/colors';
 
 // Pressasble 컴포넌트가 제공하는 props의 타입을 따로 만들지 않고 확장
 interface CustomButtonProps extends PressableProps {
