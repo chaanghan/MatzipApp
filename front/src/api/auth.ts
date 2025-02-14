@@ -1,4 +1,3 @@
-import axios from 'axios';
 import axiosInstance from './axios';
 import {Category, Profile} from '../types/domain';
 import {getEncryptStorage} from '../utils/encryptStorage';
@@ -14,6 +13,7 @@ const postSignup = async ({email, password}: RequestUser): Promise<void> => {
     email,
     password,
   });
+
   return data;
 };
 
@@ -23,7 +23,7 @@ type ResponseToken = {
 };
 
 // 로그인
-// response body로 access token, refresh token을 받는다.
+// 서버에 요청을 하면 response body로 access token, refresh token을 받는다.
 const postLogin = async ({
   email,
   password,
@@ -37,13 +37,13 @@ const postLogin = async ({
 
 type ResponseProfile = Profile & Category;
 
-// 로그인한 사용자의 프로필 가져오기
+// 사용자의 프로필 가져오기
 const getProfile = async (): Promise<ResponseProfile> => {
   const {data} = await axiosInstance.get('/auth/me');
   return data;
 };
 
-// 이 api를 호출할 때는 encryptStorage에 저장된 refresh token을 불러와서 헤더로 넣어주게 된다.
+// refresh token을 헤더에 실어서 access token을 받아옴
 const getAccessToken = async (): Promise<ResponseToken> => {
   const refreshToken = await getEncryptStorage('refreshToken');
   const {data} = await axiosInstance.get('/auth/refresh', {
@@ -60,6 +60,6 @@ const logout = async () => {
   await axiosInstance.post('/auth/logout');
 };
 
-export {postSignup, postLogin, getProfile, getAccessToken};
+export {postSignup, postLogin, getProfile, getAccessToken, logout};
 
 export type {RequestUser, ResponseToken, ResponseProfile};
