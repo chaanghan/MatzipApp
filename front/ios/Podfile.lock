@@ -1140,6 +1140,8 @@ PODS:
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
+  - RNPermissions (5.2.5):
+    - React-Core
   - RNReanimated (3.16.7):
     - glog
     - RCT-Folly (= 2022.05.16.00)
@@ -1251,6 +1253,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNPermissions (from `../node_modules/react-native-permissions`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -1383,6 +1386,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-masked-view/masked-view"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNPermissions:
+    :path: "../node_modules/react-native-permissions"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
@@ -1459,11 +1464,12 @@ SPEC CHECKSUMS:
   ReactCommon: 1a93f1ef5c6e33bf14b9563cdb8e7621a893aa37
   RNCMaskedView: c8e1f01fc0f41ddf4e16246aef1143b3311588ca
   RNGestureHandler: 8408a7c393456d96bafb2b790e4fdfe913e0ba09
+  RNPermissions: ef3e16eef81cf346685e63b7aab9e578327068c1
   RNReanimated: c076386897b52fb541afa8fffe08ded731d50211
   RNScreens: 6be43a77104d5417d6d9fb3653f60d34082ce07e
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 1f93d5925ea12fb0880b21efe3566677337cf2ed
 
-PODFILE CHECKSUM: 7d91dc5b379f8819be98a55cdd8e78bb1bd91ca5
+PODFILE CHECKSUM: 9ab774d573307b9982b4503c54e2de862342ddf4
 
 COCOAPODS: 1.16.2
