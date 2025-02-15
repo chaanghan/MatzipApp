@@ -1,4 +1,5 @@
 import {colors} from '@/constants/colors';
+import usePermission from '@/hooks/usePermission';
 import useUserLocation from '@/hooks/useUserLocation';
 import {MainDrawerParamList} from '@/navigations/drawer/MainDrawerNavigator';
 import {MapStackParamList} from '@/navigations/stack/MapStackNavigator';
@@ -18,9 +19,9 @@ type Navigation = CompositeNavigationProp<
 function MapHomeScreen() {
   const inset = useSafeAreaInsets(); // 노치, 상태바 같은 요소들을 제외하고 컨텐츠 위치 조정 가능
   const navigation = useNavigation<Navigation>();
-
   const mapRef = useRef<MapView | null>(null);
   const {userLocation, isUserLocationError} = useUserLocation();
+  usePermission('LOCATION');
   const handlePressUserLocation = () => {
     if (isUserLocationError) {
       // 에러 메시지 표시
