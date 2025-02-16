@@ -8,3 +8,5 @@ Google Map API를 이용한 나만의 맛집을 기록하는 앱입니다.
 - ReactNative
 - Typescript
 - NestJS
+
+## [참고](https://velog.io/@chaanghan/series/맛집-앱-만들기)
